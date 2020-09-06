@@ -1,2 +1,3 @@
 # elfin-animation
-animation demo
+
+Realize animation through Css、JavaScript、Canvas、Svg、WebGL..., and compare usage, usage scenarios, performance, etc.
