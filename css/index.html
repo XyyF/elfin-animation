@@ -54,12 +54,32 @@
             animation: marginAnimation 4s infinite;
         }
     </style>
+    <style>
+        @keyframes absoluteAnimation {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 300px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .animation__absolute.animation {
+            position: absolute;
+            animation: absoluteAnimation 4s infinite;
+        }
+    </style>
 </head>
 <body>
 <div class="body__btn-wrapper">
     <button class="animation__transform-btn">transform动画</button>
     <button class="animation__margin-btn">margin动画</button>
-    <button>absolute动画</button>
+    <button class="animation__absolute-btn">absolute动画</button>
 </div>
 
 <div class="body__wrapper">
@@ -78,6 +98,13 @@
         const animation = document.querySelector('.animation')
         btn.addEventListener('click', () => {
             animation.className = 'animation animation__margin'
+        })
+    }()
+    void function absolute() {
+        const btn = document.querySelector('.animation__absolute-btn')
+        const animation = document.querySelector('.animation')
+        btn.addEventListener('click', () => {
+            animation.className = 'animation animation__absolute'
         })
     }()
 </script>
