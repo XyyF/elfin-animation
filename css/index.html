@@ -31,20 +31,55 @@
             }
         }
 
-        .animation {
+        .animation__transform.animation {
             animation: transformAnimation 4s infinite;
+        }
+    </style>
+    <style>
+        @keyframes marginAnimation {
+            0% {
+                margin-left: 0;
+            }
+
+            50% {
+                margin-left: 300px;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+
+        .animation__margin.animation {
+            animation: marginAnimation 4s infinite;
         }
     </style>
 </head>
 <body>
 <div class="body__btn-wrapper">
-    <button>transform动画</button>
-    <button>margin动画</button>
+    <button class="animation__transform-btn">transform动画</button>
+    <button class="animation__margin-btn">margin动画</button>
     <button>absolute动画</button>
 </div>
 
 <div class="body__wrapper">
     <div class="animation"></div>
 </div>
+<script>
+    void function transform() {
+        const btn = document.querySelector('.animation__transform-btn')
+        const animation = document.querySelector('.animation')
+        btn.addEventListener('click', () => {
+            animation.className = 'animation animation__transform'
+        })
+    }()
+    void function margin() {
+        const btn = document.querySelector('.animation__margin-btn')
+        const animation = document.querySelector('.animation')
+        btn.addEventListener('click', () => {
+            animation.className = 'animation animation__margin'
+        })
+    }()
+</script>
 </body>
 </html>
