@@ -16,29 +16,14 @@
             flex-shrink: 0;
         }
 
+        .body__btn-wrapper button + button {
+            margin-left: 10px;
+        }
+
         .animation {
             width: 100px;
             height: 100px;
             background-color: red;
-        }
-    </style>
-    <style>
-        @keyframes marginAnimation {
-            0% {
-                margin-left: 0;
-            }
-
-            50% {
-                margin-left: 300px;
-            }
-
-            100% {
-                margin-left: 0;
-            }
-        }
-
-        .animation__margin.animation {
-            animation: marginAnimation 4s infinite;
         }
     </style>
     <style>
@@ -66,56 +51,15 @@
 <body>
 <div class="body__wrapper">
     <div class="body__btn-wrapper">
-        <!--<button class="animation__transform-btn">transform动画</button>-->
-        <!--<button class="animation__margin-btn">margin动画</button>-->
-        <!--<button class="animation__fixed-btn">fixed动画</button>-->
-
         <div class="animation"></div>
     </div>
 
     <div class="body__detail">
-        <!--<div class="detail__transform">-->
-            <!--<p>-->
-                <!--一：会产生新的图层(Has an active accelerated transform animation or transition)-->
-                <!--<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9tuz35cj30wy0u0dhc.jpg" style="width: 400px;">-->
-
-            <!--</p>-->
-            <!--<p>-->
-                <!--二：动画通过修改CSS视觉格式化模型的坐标空间，发生在Composite Layers，不会触发回流、重绘-->
-                <!--<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9y7pslrj31b20s2my8.jpg" style="width: 300px;display: block">-->
-            <!--</p>-->
-        <!--</div>-->
-        <!--<div class="detail__margin">-->
-            <!--<p>-->
-                <!--一：发生Layout Shift布局偏移，因为改变了盒模型本身的结构-->
-            <!--</p>-->
-            <!--<p>-->
-                <!--二：margin: 发生Layout Shift布局偏移，Recalculate Style -> Layout -> Paint -> Composite Layers-->
-            <!--</p>-->
-        <!--</div>-->
         <!--fixed: Recalculate Style -> Layout -> Paint -> Composite Layers-->
     </div>
 </div>
 
 <script>
-    // void function transform() {
-    //     const btn = document.querySelector('.animation__transform-btn')
-    //     const animation = document.querySelector('.animation')
-    //     const bodyDetail = document.querySelector('.body__detail')
-    //     btn.addEventListener('click', () => {
-    //         animation.className = 'animation animation__transform'
-    //         bodyDetail.className = 'body__detail body__detail-transform'
-    //     })
-    // }()
-    // void function margin() {
-    //     const btn = document.querySelector('.animation__margin-btn')
-    //     const animation = document.querySelector('.animation')
-    //     const bodyDetail = document.querySelector('.body__detail')
-    //     btn.addEventListener('click', () => {
-    //         animation.className = 'animation animation__margin'
-    //         bodyDetail.className = 'body__detail body__detail-margin'
-    //     })
-    // }()
     // void function fixed() {
     //     const btn = document.querySelector('.animation__fixed-btn')
     //     const animation = document.querySelector('.animation')
@@ -127,5 +71,6 @@
     // }()
 </script>
 <script src="transform.js"></script>
+<script src="margin.js"></script>
 </body>
 </html>
