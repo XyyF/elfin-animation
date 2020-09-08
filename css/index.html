@@ -55,7 +55,7 @@
         }
     </style>
     <style>
-        @keyframes absoluteAnimation {
+        @keyframes fixedAnimation {
             0% {
                 left: 0;
             }
@@ -69,9 +69,10 @@
             }
         }
 
-        .animation__absolute.animation {
-            position: absolute;
-            animation: absoluteAnimation 4s infinite;
+        .animation__fixed.animation {
+            position: fixed;
+            top: 35px;
+            animation: fixedAnimation 4s infinite;
         }
     </style>
 </head>
@@ -79,11 +80,17 @@
 <div class="body__btn-wrapper">
     <button class="animation__transform-btn">transform动画</button>
     <button class="animation__margin-btn">margin动画</button>
-    <button class="animation__absolute-btn">absolute动画</button>
+    <button class="animation__fixed-btn">fixed动画</button>
 </div>
 
 <div class="body__wrapper">
     <div class="animation"></div>
+
+    <div>
+        transform: 有新的图层，通过修改CSS视觉格式化模型的坐标空间，发生在Composite Layers，不会触发回流、重绘
+        margin: 发生Layout Shift布局偏移，Recalculate Style -> Layout -> Paint -> Composite Layers
+        fixed: Recalculate Style -> Layout -> Paint -> Composite Layers
+    </div>
 </div>
 <script>
     void function transform() {
@@ -100,11 +107,11 @@
             animation.className = 'animation animation__margin'
         })
     }()
-    void function absolute() {
-        const btn = document.querySelector('.animation__absolute-btn')
+    void function fixed() {
+        const btn = document.querySelector('.animation__fixed-btn')
         const animation = document.querySelector('.animation')
         btn.addEventListener('click', () => {
-            animation.className = 'animation animation__absolute'
+            animation.className = 'animation animation__fixed'
         })
     }()
 </script>
