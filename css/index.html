@@ -26,27 +26,6 @@
             background-color: red;
         }
     </style>
-    <style>
-        @keyframes fixedAnimation {
-            0% {
-                left: 0;
-            }
-
-            50% {
-                left: 300px;
-            }
-
-            100% {
-                left: 0;
-            }
-        }
-
-        .animation__fixed.animation {
-            position: fixed;
-            top: 35px;
-            animation: fixedAnimation 4s infinite;
-        }
-    </style>
 </head>
 <body>
 <div class="body__wrapper">
@@ -54,23 +33,11 @@
         <div class="animation"></div>
     </div>
 
-    <div class="body__detail">
-        <!--fixed: Recalculate Style -> Layout -> Paint -> Composite Layers-->
-    </div>
+    <div class="body__detail"></div>
 </div>
 
-<script>
-    // void function fixed() {
-    //     const btn = document.querySelector('.animation__fixed-btn')
-    //     const animation = document.querySelector('.animation')
-    //     const bodyDetail = document.querySelector('.body__detail')
-    //     btn.addEventListener('click', () => {
-    //         animation.className = 'animation animation__fixed'
-    //         bodyDetail.className = 'body__detail body__detail-fixed'
-    //     })
-    // }()
-</script>
 <script src="transform.js"></script>
 <script src="margin.js"></script>
+<script src="fixed.js"></script>
 </body>
 </html>
