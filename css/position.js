@@ -52,6 +52,9 @@ void function fixed() {
                 top: 35px;
                 animation: fixedAnimation 4s infinite;
             }
+            
+            .btn__wrapper-fixed {
+            }
         `
         document.head.appendChild(style)
     }

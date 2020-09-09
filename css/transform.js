@@ -24,7 +24,7 @@ void function transform() {
         detailWrapper.innerHTML = `
             <div class="detail__transform">
                 <p>
-                    一：会产生新的图层(Has an active accelerated transform animation or transition)
+                    一：transition动画中会产生新的图层(Has an active accelerated transform animation or transition)，过度使用会带来图层创建的成本过大
                     <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9tuz35cj30wy0u0dhc.jpg" style="width: 400px;">
                 </p>
                 <p>
