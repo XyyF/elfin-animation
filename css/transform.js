@@ -20,9 +20,9 @@ void function transform() {
         })
         // 包裹容器
         const wrapper = document.createElement('div')
+        wrapper.className = 'radio__wrapper'
         wrapper.appendChild(radio)
         wrapper.appendChild(label)
-        wrapper.style.display = 'inline-block'
 
         btnWrapper.insertBefore(wrapper, animation)
     }
