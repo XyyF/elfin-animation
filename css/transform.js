@@ -7,17 +7,22 @@ void function transform() {
     const detailWrapper = document.querySelector('.body__detail')
 
     function initButton() {
-        const btn = document.createElement('button')
-        btn.innerText = 'transform动画'
+        const radio = window.elfinJsonp.createInput('transform动画', 'css')
+        const label = window.elfinJsonp.createLabel('transform动画')
         const animation = document.querySelector('.animation')
         const bodyDetail = document.querySelector('.body__detail')
-        btn.addEventListener('click', () => {
+        radio.addEventListener('input', () => {
+            // 改变动画class
             animation.className = 'animation animation__transform'
+            // 改变说明class
             bodyDetail.className = 'body__detail body__detail-transform'
             initDetail()
         })
+        const wrapper = document.createElement('div')
+        wrapper.appendChild(radio)
+        wrapper.appendChild(label)
 
-        btnWrapper.insertBefore(btn, animation)
+        btnWrapper.insertBefore(wrapper, animation)
     }
 
     function initDetail() {
