@@ -18,9 +18,11 @@ void function transform() {
             bodyDetail.className = 'body__detail body__detail-transform'
             initDetail()
         })
+        // 包裹容器
         const wrapper = document.createElement('div')
         wrapper.appendChild(radio)
         wrapper.appendChild(label)
+        wrapper.style.display = 'inline-block'
 
         btnWrapper.insertBefore(wrapper, animation)
     }

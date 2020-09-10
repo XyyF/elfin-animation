@@ -7,17 +7,22 @@ void function margin() {
     const detailWrapper = document.querySelector('.body__detail')
 
     function initButton() {
-        const btn = document.createElement('button')
-        btn.innerText = 'margin动画'
+        const radio = window.elfinJsonp.createInput('margin动画', 'css')
+        const label = window.elfinJsonp.createLabel('margin动画')
         const animation = document.querySelector('.animation')
         const bodyDetail = document.querySelector('.body__detail')
-        btn.addEventListener('click', () => {
+        radio.addEventListener('input', () => {
             animation.className = 'animation animation__margin'
             bodyDetail.className = 'body__detail body__detail-margin'
             initDetail()
         })
+        // 包裹容器
+        const wrapper = document.createElement('div')
+        wrapper.appendChild(radio)
+        wrapper.appendChild(label)
+        wrapper.style.display = 'inline-block'
 
-        btnWrapper.insertBefore(btn, animation)
+        btnWrapper.insertBefore(wrapper, animation)
     }
 
     function initDetail() {
