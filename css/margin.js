@@ -29,6 +29,10 @@ void function margin() {
         detailWrapper.innerHTML = `
             <div class="detail__margin">
                 <p>
+                    <h3>Performance</h3>
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gip02ib4d3j317e0u0tby.jpg" style="width: 700px;display: block">
+                </p>
+                <p>
                     一：margin-left动画发生CLS(Cumulative Layout Shift)布局偏移，当可见元素改变了它的位置，从一个渲染帧到下一个。
                     <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gimqe1ympsj318q0cojrt.jpg" style="width: 400px;">
                 </p>

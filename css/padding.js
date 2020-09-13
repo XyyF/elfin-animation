@@ -29,7 +29,11 @@ void function padding() {
         detailWrapper.innerHTML = `
             <div class="detail__padding">
                 <p>
-                    二：padding: Recalculate Style -> Layout -> Paint -> Composite Layers
+                    <h3>Performance</h3>
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gip060va62j317e0u041f.jpg" style="width: 700px;display: block">
+                </p>
+                <p>
+                    padding: Recalculate Style -> Layout -> Paint -> Composite Layers
                 </p>
             </div>
         `

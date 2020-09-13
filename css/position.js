@@ -27,7 +27,11 @@ void function fixed() {
 
     function initDetail() {
         detailWrapper.innerHTML = `
-            <div class="detail__margin">
+            <div class="detail__margin">           
+                <p>
+                    <h3>Performance</h3>
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gip0bxin1ij317e0u0gop.jpg" style="width: 700px;display: block">
+                </p>
                 <p>
                     一：fixed: Recalculate Style -> Layout -> Paint -> Composite Layers
                 </p>
@@ -54,7 +58,7 @@ void function fixed() {
 
             .animation__fixed.animation {
                 position: fixed;
-                top: 35px;
+                top: 135px;
                 animation: fixedAnimation 4s infinite;
             }
             
