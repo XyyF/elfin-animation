@@ -31,12 +31,15 @@ void function transform() {
         detailWrapper.innerHTML = `
             <div class="detail__transform">
                 <p>
-                    一：transition动画中会产生新的图层(Has an active accelerated transform animation or transition)，过度使用会带来图层创建的成本过大
-                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9tuz35cj30wy0u0dhc.jpg" style="width: 400px;">
+                    <h3>Performance</h3>
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1giozwlnceij317e0u0tba.jpg" style="width: 700px;display: block">
                 </p>
                 <p>
-                    二：动画通过修改CSS视觉格式化模型的坐标空间，发生在Composite Layers，不会触发回流、重绘
-                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9y7pslrj31b20s2my8.jpg" style="width: 300px;display: block">
+                    一：动画通过修改CSS视觉格式化模型的坐标空间，发生在Composite Layers，不会触发回流、重绘                  
+                </p>
+                <p>
+                    二：transition动画中会产生新的图层(Has an active accelerated transform animation or transition)，过度使用会带来图层创建的成本过大
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gij9tuz35cj30wy0u0dhc.jpg" style="width: 400px;display: block;">
                 </p>
             </div>
         `
