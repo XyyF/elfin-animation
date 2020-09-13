@@ -3,14 +3,16 @@
  */
 
 void function margin() {
+    let count = 0
     const btnWrapper = document.querySelector('.body__btn-wrapper')
     const detailWrapper = document.querySelector('.body__detail')
 
-    function initButton() {
+    function initRadio() {
         const radio = window.elfinJsonp.createInput('margin动画', 'css')
         const label = window.elfinJsonp.createLabel('margin动画')
         const animation = document.querySelector('.animation')
         radio.addEventListener('input', () => {
+            count = 0
             window.elfinJsonp.createAnimationFrame(animationFrame)
             initDetail()
         })
@@ -23,10 +25,13 @@ void function margin() {
         btnWrapper.insertBefore(wrapper, animation)
 
         function animationFrame() {
-            const left = getComputedStyle(animation).marginLeft
-            if (!left) {
-                animation.style.marginLeft = '2px'
+            if (count < 300) {
+                count += 2
+                animation.style.marginLeft = `${count}px`
+            } else {
+                count = 0
             }
+            window.elfinJsonp.createAnimationFrame(animationFrame)
         }
     }
 
@@ -44,5 +49,5 @@ void function margin() {
         `
     }
 
-    initButton()
+    initRadio()
 }()

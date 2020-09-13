@@ -6,7 +6,7 @@ void function padding() {
     const btnWrapper = document.querySelector('.body__btn-wrapper')
     const detailWrapper = document.querySelector('.body__detail')
 
-    function initButton() {
+    function initRadio() {
         const radio = window.elfinJsonp.createInput('padding动画', 'css')
         const label = window.elfinJsonp.createLabel('padding动画')
         const animation = document.querySelector('.animation')
@@ -59,6 +59,6 @@ void function padding() {
         document.head.appendChild(style)
     }
 
-    initButton()
+    initRadio()
     initStyle()
 }()

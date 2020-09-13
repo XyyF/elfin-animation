@@ -6,7 +6,7 @@ void function transform() {
     const btnWrapper = document.querySelector('.body__btn-wrapper')
     const detailWrapper = document.querySelector('.body__detail')
 
-    function initButton() {
+    function initRadio() {
         const radio = window.elfinJsonp.createInput('transform动画', 'css')
         const label = window.elfinJsonp.createLabel('transform动画')
         const animation = document.querySelector('.animation')
@@ -66,6 +66,6 @@ void function transform() {
         document.head.appendChild(style)
     }
 
-    initButton()
+    initRadio()
     initStyle()
 }()
