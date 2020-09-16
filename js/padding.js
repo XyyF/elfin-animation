@@ -1,15 +1,15 @@
 /**
- * Created by rengar on 2020/9/8.
+ * Created by rengar on 2020/9/16.
  */
 
-void function margin() {
+void function padding() {
     let count = 0
     const btnWrapper = document.querySelector('.body__btn-wrapper')
     const detailWrapper = document.querySelector('.body__detail')
 
     function initRadio() {
-        const radio = window.elfinJsonp.createInput('margin动画', 'css')
-        const label = window.elfinJsonp.createLabel('margin动画')
+        const radio = window.elfinJsonp.createInput('padding动画', 'css')
+        const label = window.elfinJsonp.createLabel('padding动画')
         const animation = document.querySelector('.animation')
         radio.addEventListener('input', () => {
             count = 0
@@ -29,7 +29,7 @@ void function margin() {
         function animationFrame() {
             if (count < 300) {
                 count += 2
-                animation.style.marginLeft = `${count}px`
+                animation.style.paddingLeft = `${count}px`
             } else {
                 count = 0
             }
@@ -39,10 +39,10 @@ void function margin() {
 
     function initDetail() {
         detailWrapper.innerHTML = `
-            <div class="detail__margin">
+            <div class="detail__padding">
                 <p>
                     <h3>Performance</h3>
-                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1giozq7vgm5j317e0u0gp7.jpg" style="width: 700px;display: block;">
+                    <!--<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1giozq7vgm5j317e0u0gp7.jpg" style="width: 700px;display: block;">-->
                 </p>
             </div>
         `

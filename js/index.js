@@ -4,6 +4,7 @@
 window.elfinJsonp = Object.create(null)
 
 void function () {
+    let timer = null
     // 创建input
     window.elfinJsonp.createInput = function(value, name) {
         const input = document.createElement('input')
@@ -22,8 +23,18 @@ void function () {
     }
 
     window.elfinJsonp.createAnimationFrame = function(callback) {
-        const timer = setTimeout(() => {
+        timer = setTimeout(() => {
             callback()
         }, 10)
+    }
+
+    window.elfinJsonp.clearAnimationFrame = function() {
+        clearTimeout(timer)
+    }
+
+    window.elfinJsonp.initStyle = function() {
+        const animation = document.querySelector('.animation')
+        animation.style.marginLeft = ''
+        animation.style.paddingLeft = ''
     }
 }()
